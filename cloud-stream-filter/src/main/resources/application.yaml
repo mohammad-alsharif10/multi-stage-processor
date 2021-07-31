@@ -1,0 +1,17 @@
+#spring:
+#  cloud:
+#    stream:
+#      function:
+#        definition: accumulate;receive;send
+#      bindings:
+#        send-out-0:
+#          destination: ints
+#        receive-in-0:
+#          destination: total
+#        accumulate-in-0:
+#          destination: domainDataExchange
+#          group: domainDataQueue
+#        accumulate-out-0:
+#          destination: total
+
+
