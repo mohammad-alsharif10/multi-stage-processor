@@ -42,7 +42,9 @@ public class DomainDataQueue {
 
     private Root getRoot(String body) {
         try {
-            return objectMapper.readValue(body, Root.class);
+            Root root = objectMapper.readValue(body, Root.class);
+            System.out.println(root);
+            return root;
         } catch (JsonProcessingException e) {
             e.printStackTrace();
             return null;
